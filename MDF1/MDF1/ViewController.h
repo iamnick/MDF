@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
+{
+	IBOutlet UITableView *tableView;
+	NSArray *groceries;
+}
 @end
