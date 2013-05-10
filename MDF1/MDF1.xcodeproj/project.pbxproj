@@ -18,6 +18,8 @@
 		82A40597173C637B00A2D89C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A40596173C637B00A2D89C /* Default-568h@2x.png */; };
 		82A4059A173C637B00A2D89C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A40599173C637B00A2D89C /* ViewController.m */; };
 		82A4059D173C637B00A2D89C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A4059B173C637B00A2D89C /* ViewController.xib */; };
+		82A405A4173C768A00A2D89C /* CustomCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A405A3173C768A00A2D89C /* CustomCellView.xib */; };
+		82A405A7173C774600A2D89C /* CustomTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A405A6173C774600A2D89C /* CustomTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		82A40598173C637B00A2D89C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		82A40599173C637B00A2D89C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		82A4059C173C637B00A2D89C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		82A405A3173C768A00A2D89C /* CustomCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellView.xib; sourceTree = "<group>"; };
+		82A405A5173C774600A2D89C /* CustomTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableCell.h; sourceTree = "<group>"; };
+		82A405A6173C774600A2D89C /* CustomTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +94,9 @@
 				82A40599173C637B00A2D89C /* ViewController.m */,
 				82A4059B173C637B00A2D89C /* ViewController.xib */,
 				82A40587173C637B00A2D89C /* Supporting Files */,
+				82A405A3173C768A00A2D89C /* CustomCellView.xib */,
+				82A405A5173C774600A2D89C /* CustomTableCell.h */,
+				82A405A6173C774600A2D89C /* CustomTableCell.m */,
 			);
 			path = MDF1;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 				82A40595173C637B00A2D89C /* Default@2x.png in Resources */,
 				82A40597173C637B00A2D89C /* Default-568h@2x.png in Resources */,
 				82A4059D173C637B00A2D89C /* ViewController.xib in Resources */,
+				82A405A4173C768A00A2D89C /* CustomCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +185,7 @@
 				82A4058D173C637B00A2D89C /* main.m in Sources */,
 				82A40591173C637B00A2D89C /* AppDelegate.m in Sources */,
 				82A4059A173C637B00A2D89C /* ViewController.m in Sources */,
+				82A405A7173C774600A2D89C /* CustomTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

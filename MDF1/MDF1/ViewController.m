@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CustomTableCell.h"
 
 @interface ViewController ()
 
@@ -17,7 +18,7 @@
 - (void)viewDidLoad
 {
 	// Array of Grocery List Items
-	groceries = [[NSArray alloc] initWithObjects:@"Apples", @"Bagels", @"Bananas", @"Bread", @"Bottled Water", @"Cheese", @"Coffee Beans", @"Eggs", @"Flour", @"Frozen Pizza", @"Ham", @"Hot Dogs", @"Lettuce", @"Milk", @"Onions", @"Parsley", @"Red Peppers", @"Rice", @"Watermelon", @"Yogurt", nil];
+	groceries = [[NSMutableArray alloc] initWithObjects:@"Apples", @"Bagels", @"Bananas", @"Bread", @"Bottled Water", @"Cheese", @"Coffee Beans", @"Eggs", @"Flour", @"Frozen Pizza", @"Ham", @"Hot Dogs", @"Lettuce", @"Milk", @"Onions", @"Parsley", @"Red Peppers", @"Rice", @"Watermelon", @"Yogurt", nil];
 
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -41,9 +42,15 @@
 	
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-	}
-	cell.textLabel.text = [groceries objectAtIndex:indexPath.row];
+        NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CustomCellView" owner:self options:nil];
+        cell = [views objectAtIndex:0];
+    }
+    // set labels/image for each
+    UILabel *itemNameLabel = (UILabel*)[cell viewWithTag:1];
+    itemNameLabel.text = [groceries objectAtIndex:indexPath.row];
+    UILabel *quantityLabel = (UILabel*)[cell viewWithTag:2];
+    quantityLabel.text = @"0";
+    
 	return cell;
 }
 
