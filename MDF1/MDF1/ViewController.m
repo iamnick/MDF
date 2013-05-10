@@ -47,5 +47,31 @@
 	return cell;
 }
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+	return UITableViewCellEditingStyleDelete;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	NSLog(@"row=%d, name=%@", indexPath.row, [groceries objectAtIndex:indexPath.row]);
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	// Delete Mode
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+    	NSLog(@"%d", indexPath.row);
+    	[groceries removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:true];
+    }
+}
+
+// Remove Items Button
+-(IBAction)onClick:(id)sender
+{
+	[tableView setEditing:YES animated:YES];	
+}
 
 @end
