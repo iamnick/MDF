@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ItemInfoView.h"
 
 @interface ViewController : UIViewController <UITableViewDelegate>
 {

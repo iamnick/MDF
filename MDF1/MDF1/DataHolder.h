@@ -11,6 +11,7 @@
 @interface DataHolder : NSObject
 
 @property NSMutableArray *groceries;
+@property int selectedItem;
 
 +(void)CreateInstance;
 +(DataHolder*)GetInstance;

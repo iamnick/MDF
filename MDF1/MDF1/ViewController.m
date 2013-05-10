@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "CustomTableCell.h"
 #import "DataHolder.h"
+#import "ItemInfoView.h"
 
 @interface ViewController ()
 
@@ -61,7 +62,11 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	NSLog(@"row=%d, name=%@", indexPath.row, [groceries objectAtIndex:indexPath.row]);
+	ItemInfoView *itemInfoView = [[ItemInfoView alloc] initWithNibName:@"ItemInfoView" bundle:nil];
+    if (itemInfoView != nil) {
+    	[[DataHolder GetInstance] setSelectedItem:indexPath.row];
+        [self presentViewController:itemInfoView animated:true completion:^(){}];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -70,8 +75,9 @@
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
     	NSLog(@"%d", indexPath.row);
-    	[groceries removeObjectAtIndex:indexPath.row];
+    	[[[DataHolder GetInstance] groceries] removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:true];
+        [tableView setEditing:NO animated:YES];
     }
 }
 

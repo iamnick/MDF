@@ -10,7 +10,7 @@
 
 @implementation DataHolder
 
-@synthesize groceries;
+@synthesize groceries, selectedItem;
 
 static DataHolder *_instance = nil;
 
