@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CustomTableCell.h"
+#import "DataHolder.h"
 
 @interface ViewController ()
 
@@ -17,9 +18,8 @@
 
 - (void)viewDidLoad
 {
-	// Array of Grocery List Items
-	groceries = [[NSMutableArray alloc] initWithObjects:@"Apples", @"Bagels", @"Bananas", @"Bread", @"Bottled Water", @"Cheese", @"Coffee Beans", @"Eggs", @"Flour", @"Frozen Pizza", @"Ham", @"Hot Dogs", @"Lettuce", @"Milk", @"Onions", @"Parsley", @"Red Peppers", @"Rice", @"Watermelon", @"Yogurt", nil];
-
+	[DataHolder CreateInstance];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -33,7 +33,7 @@
 // Grocery List Table View
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return [groceries count];
+	return [[[DataHolder GetInstance] groceries] count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -47,9 +47,9 @@
     }
     // set labels/image for each
     UILabel *itemNameLabel = (UILabel*)[cell viewWithTag:1];
-    itemNameLabel.text = [groceries objectAtIndex:indexPath.row];
+    itemNameLabel.text = [[[DataHolder GetInstance] groceries] objectAtIndex:indexPath.row];
     UILabel *quantityLabel = (UILabel*)[cell viewWithTag:2];
-    quantityLabel.text = @"0";
+    quantityLabel.text = @"1";
     
 	return cell;
 }

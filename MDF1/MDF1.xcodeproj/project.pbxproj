@@ -22,6 +22,7 @@
 		82A405A7173C774600A2D89C /* CustomTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A405A6173C774600A2D89C /* CustomTableCell.m */; };
 		82A405B3173C847C00A2D89C /* 114icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A405B2173C847C00A2D89C /* 114icon.png */; };
 		82A405B5173C848200A2D89C /* 57icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A405B4173C848200A2D89C /* 57icon.png */; };
+		82A405B8173C84F200A2D89C /* DataHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A405B7173C84F200A2D89C /* DataHolder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		82A405A6173C774600A2D89C /* CustomTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableCell.m; sourceTree = "<group>"; };
 		82A405B2173C847C00A2D89C /* 114icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114icon.png; sourceTree = "<group>"; };
 		82A405B4173C848200A2D89C /* 57icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57icon.png; sourceTree = "<group>"; };
+		82A405B6173C84F200A2D89C /* DataHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHolder.h; sourceTree = "<group>"; };
+		82A405B7173C84F200A2D89C /* DataHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHolder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				82A405A3173C768A00A2D89C /* CustomCellView.xib */,
 				82A405A5173C774600A2D89C /* CustomTableCell.h */,
 				82A405A6173C774600A2D89C /* CustomTableCell.m */,
+				82A405B6173C84F200A2D89C /* DataHolder.h */,
+				82A405B7173C84F200A2D89C /* DataHolder.m */,
 			);
 			path = MDF1;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				82A40591173C637B00A2D89C /* AppDelegate.m in Sources */,
 				82A4059A173C637B00A2D89C /* ViewController.m in Sources */,
 				82A405A7173C774600A2D89C /* CustomTableCell.m in Sources */,
+				82A405B8173C84F200A2D89C /* DataHolder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
