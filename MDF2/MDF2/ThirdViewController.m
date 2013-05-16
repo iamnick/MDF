@@ -7,6 +7,7 @@
 //
 
 #import "ThirdViewController.h"
+#import "DatabaseEntries.h"
 
 @interface ThirdViewController ()
 
@@ -27,6 +28,7 @@
 
 - (void)viewDidLoad
 {
+	[DatabaseEntries CreateInstance];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }

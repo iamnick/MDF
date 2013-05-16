@@ -26,6 +26,7 @@
 		82A4062D1744358400A2D89C /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A4062B1744358400A2D89C /* SecondViewController.xib */; };
 		82A406341744CE5B00A2D89C /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A406331744CE5B00A2D89C /* ThirdViewController.xib */; };
 		82A406371744CE8F00A2D89C /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A406361744CE8F00A2D89C /* ThirdViewController.m */; };
+		82A4063D1744EAF100A2D89C /* DatabaseEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A4063C1744EAF000A2D89C /* DatabaseEntries.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		82A406331744CE5B00A2D89C /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ThirdViewController.xib; path = ../ThirdViewController.xib; sourceTree = "<group>"; };
 		82A406351744CE8F00A2D89C /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		82A406361744CE8F00A2D89C /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		82A4063B1744EAF000A2D89C /* DatabaseEntries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseEntries.h; sourceTree = "<group>"; };
+		82A4063C1744EAF000A2D89C /* DatabaseEntries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseEntries.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				82A4062B1744358400A2D89C /* SecondViewController.xib */,
 				82A406331744CE5B00A2D89C /* ThirdViewController.xib */,
 				82A406091744358400A2D89C /* Supporting Files */,
+				82A4063B1744EAF000A2D89C /* DatabaseEntries.h */,
+				82A4063C1744EAF000A2D89C /* DatabaseEntries.m */,
 			);
 			path = MDF2;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				82A4061C1744358400A2D89C /* FirstViewController.m in Sources */,
 				82A406231744358400A2D89C /* SecondViewController.m in Sources */,
 				82A406371744CE8F00A2D89C /* ThirdViewController.m in Sources */,
+				82A4063D1744EAF100A2D89C /* DatabaseEntries.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

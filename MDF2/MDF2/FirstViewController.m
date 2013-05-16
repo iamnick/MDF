@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "DatabaseEntries.h"
 
 @interface FirstViewController ()
 
@@ -26,6 +27,7 @@
 							
 - (void)viewDidLoad
 {
+	[DatabaseEntries CreateInstance];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

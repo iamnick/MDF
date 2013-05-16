@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import "DatabaseEntries.h"
 
 @interface SecondViewController ()
 
@@ -26,6 +27,7 @@
 							
 - (void)viewDidLoad
 {
+	[DatabaseEntries CreateInstance];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
