@@ -27,6 +27,8 @@
 		82A406341744CE5B00A2D89C /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A406331744CE5B00A2D89C /* ThirdViewController.xib */; };
 		82A406371744CE8F00A2D89C /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A406361744CE8F00A2D89C /* ThirdViewController.m */; };
 		82A4063D1744EAF100A2D89C /* DatabaseEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A4063C1744EAF000A2D89C /* DatabaseEntries.m */; };
+		82A4063F174584CC00A2D89C /* DetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A4063E174584CC00A2D89C /* DetailsView.xib */; };
+		82A40642174584E700A2D89C /* DetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A40641174584E600A2D89C /* DetailsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,9 @@
 		82A406361744CE8F00A2D89C /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		82A4063B1744EAF000A2D89C /* DatabaseEntries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseEntries.h; sourceTree = "<group>"; };
 		82A4063C1744EAF000A2D89C /* DatabaseEntries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseEntries.m; sourceTree = "<group>"; };
+		82A4063E174584CC00A2D89C /* DetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsView.xib; sourceTree = "<group>"; };
+		82A40640174584E600A2D89C /* DetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsView.h; sourceTree = "<group>"; };
+		82A40641174584E600A2D89C /* DetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +127,9 @@
 				82A406091744358400A2D89C /* Supporting Files */,
 				82A4063B1744EAF000A2D89C /* DatabaseEntries.h */,
 				82A4063C1744EAF000A2D89C /* DatabaseEntries.m */,
+				82A4063E174584CC00A2D89C /* DetailsView.xib */,
+				82A40640174584E600A2D89C /* DetailsView.h */,
+				82A40641174584E600A2D89C /* DetailsView.m */,
 			);
 			path = MDF2;
 			sourceTree = "<group>";
@@ -202,6 +210,7 @@
 				82A4062A1744358400A2D89C /* FirstViewController.xib in Resources */,
 				82A4062D1744358400A2D89C /* SecondViewController.xib in Resources */,
 				82A406341744CE5B00A2D89C /* ThirdViewController.xib in Resources */,
+				82A4063F174584CC00A2D89C /* DetailsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +227,7 @@
 				82A406231744358400A2D89C /* SecondViewController.m in Sources */,
 				82A406371744CE8F00A2D89C /* ThirdViewController.m in Sources */,
 				82A4063D1744EAF100A2D89C /* DatabaseEntries.m in Sources */,
+				82A40642174584E700A2D89C /* DetailsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

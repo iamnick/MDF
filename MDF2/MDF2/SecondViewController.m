@@ -8,6 +8,7 @@
 
 #import "SecondViewController.h"
 #import "DatabaseEntries.h"
+#import "DetailsView.h"
 
 @interface SecondViewController ()
 
@@ -36,6 +37,40 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// Table View Configuration
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	// Get Only Periodical Type Indexes
+	return [[[DatabaseEntries GetInstance] GetValidEntries:@"Periodical"] count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	static NSString *CellIdentifier = @"Cell";
+	
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+	}
+    
+    NSMutableArray *results = [[DatabaseEntries GetInstance] GetValidEntries:@"Periodical"];
+	NSInteger currentEntry = [[results objectAtIndex:indexPath.row] intValue];
+    cell.textLabel.text = [[[DatabaseEntries GetInstance] GetSpecificEntry:currentEntry] objectAtIndex:indexPath.row];
+	return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	// Set Selected Item as the index of the entry in the array so we can pull that data on the details view
+	NSMutableArray *results = [[DatabaseEntries GetInstance] GetValidEntries:@"Periodical"];
+    [[DatabaseEntries GetInstance] setSelectedItem:[[results objectAtIndex:indexPath.row] intValue]];
+    
+	DetailsView *detailsView = [[DetailsView alloc] initWithNibName:@"DetailsView" bundle:nil];
+    if (detailsView != nil) {
+        [self.navigationController pushViewController:detailsView animated:true];
+    }
 }
 
 @end

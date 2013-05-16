@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "DatabaseEntries.h"
+#import "DetailsView.h"
 
 @interface FirstViewController ()
 
@@ -23,14 +24,6 @@
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
     return self;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-	// Get Only Academic Journal Type Indexes
-    //NSMutableArray *results = [[DatabaseEntries GetInstance] GetValidEntries:@"Academic Journal"];
-    
-    //NSLog(@"%@", results.description);
 }
 							
 - (void)viewDidLoad
@@ -64,13 +57,20 @@
     
     NSMutableArray *results = [[DatabaseEntries GetInstance] GetValidEntries:@"Academic Journal"];
 	NSInteger currentEntry = [[results objectAtIndex:indexPath.row] intValue];
-    NSLog(@"%@", results.description);
-    NSLog(@"current Entry = %d", currentEntry);
-    NSArray *specificResult = [[DatabaseEntries GetInstance] GetSpecificEntry:currentEntry];
-    NSLog(@"%@", [specificResult objectAtIndex:0]); // 0 returns the title
-    cell.textLabel.text = [specificResult objectAtIndex:0];
-    //[[[DatabaseEntries GetInstance] GetSpecificEntry:[results objectAtIndex:indexPath]] objectAtIndex:[results objectAtIndex:indexPath]];
+    cell.textLabel.text = [[[DatabaseEntries GetInstance] GetSpecificEntry:currentEntry] objectAtIndex:0];
 	return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	// Set Selected Item as the index of the entry in the array so we can pull that data on the details view
+	NSMutableArray *results = [[DatabaseEntries GetInstance] GetValidEntries:@"Academic Journal"];
+    [[DatabaseEntries GetInstance] setSelectedItem:[[results objectAtIndex:indexPath.row] intValue]];
+    
+	DetailsView *detailsView = [[DetailsView alloc] initWithNibName:@"DetailsView" bundle:nil];
+    if (detailsView != nil) {
+        [self.navigationController pushViewController:detailsView animated:true];
+    }
 }
 
 

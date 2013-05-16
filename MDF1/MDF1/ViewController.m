@@ -62,6 +62,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+	NSLog(@"clicked");
 	ItemInfoView *itemInfoView = [[ItemInfoView alloc] initWithNibName:@"ItemInfoView" bundle:nil];
     if (itemInfoView != nil) {
     	[[DataHolder GetInstance] setSelectedItem:indexPath.row];

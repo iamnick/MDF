@@ -57,6 +57,7 @@ static DatabaseEntries *_instance = nil;
 }
 
 // This function gets all of the entry information at a specific index and returns an array containing all of it
+// 0 = Title, 1 = Author, 2 = Source, 3 = EBSCO Link
 -(NSArray*)GetSpecificEntry:(int)index
 {
 	NSArray *entry = @[[self.titles objectAtIndex:index], [self.authors objectAtIndex:index], [self.sources objectAtIndex:index], [self.links objectAtIndex:index]];

@@ -16,6 +16,9 @@
 @property NSArray *sources;
 @property NSArray *links;
 
+@property int selectedItem;
+@property NSString *selectedType;
+
 +(void)CreateInstance;
 +(DatabaseEntries*)GetInstance;
 -(NSMutableArray*)GetValidEntries:(NSString*)ofDocType;
