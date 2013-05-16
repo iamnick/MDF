@@ -1,33 +1,34 @@
 //
-//  SecondViewController.m
+//  ThirdViewController.m
 //  MDF2
 //
-//  Created by Nick Stelzer on 5/15/13.
+//  Created by Nick Stelzer on 5/16/13.
 //  Copyright (c) 2013 Nick Stelzer. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "ThirdViewController.h"
 
-@interface SecondViewController ()
+@interface ThirdViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation ThirdViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Academic Journals", @"Academic Journals");
-        self.tabBarItem.image = [UIImage imageNamed:@"second"];
+        // Custom initialization
+        self.title = NSLocalizedString(@"About", @"About");
+        self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
     return self;
 }
-							
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
