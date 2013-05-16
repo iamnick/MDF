@@ -18,5 +18,6 @@
 
 +(void)CreateInstance;
 +(DatabaseEntries*)GetInstance;
-
+-(NSMutableArray*)GetValidEntries:(NSString*)ofDocType;
+-(NSArray*)GetSpecificEntry:(int)index;
 @end
