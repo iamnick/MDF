@@ -1,5 +1,5 @@
 //
-//  ThirdViewController.h
+//  AboutView.h
 //  MDF2
 //
 //  Created by Nick Stelzer on 5/16/13.
@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThirdViewController : UIViewController
-
+@interface AboutView : UIViewController
+{
+	IBOutlet UIButton *viewSourceButton;
+}
+-(IBAction)onClick:(id)sender;
 @end

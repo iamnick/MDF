@@ -57,7 +57,11 @@
     
     NSMutableArray *results = [[DatabaseEntries GetInstance] GetValidEntries:@"Periodical"];
 	NSInteger currentEntry = [[results objectAtIndex:indexPath.row] intValue];
-    cell.textLabel.text = [[[DatabaseEntries GetInstance] GetSpecificEntry:currentEntry] objectAtIndex:indexPath.row];
+    cell.textLabel.text = [[[DatabaseEntries GetInstance] GetSpecificEntry:currentEntry] objectAtIndex:0];
+    
+    UIFont *cellFont = [ UIFont fontWithName: @"Arial" size: 16.0 ];
+	cell.textLabel.font  = cellFont;
+    
 	return cell;
 }
 

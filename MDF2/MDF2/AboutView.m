@@ -1,19 +1,18 @@
 //
-//  ThirdViewController.m
+//  AboutView.m
 //  MDF2
 //
 //  Created by Nick Stelzer on 5/16/13.
 //  Copyright (c) 2013 Nick Stelzer. All rights reserved.
 //
 
-#import "ThirdViewController.h"
-#import "DatabaseEntries.h"
+#import "AboutView.h"
 
-@interface ThirdViewController ()
+@interface AboutView ()
 
 @end
 
-@implementation ThirdViewController
+@implementation AboutView
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -21,14 +20,13 @@
     if (self) {
         // Custom initialization
         self.title = NSLocalizedString(@"About", @"About");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        self.tabBarItem.image = [UIImage imageNamed:@"third"];
     }
     return self;
 }
 
 - (void)viewDidLoad
 {
-	[DatabaseEntries CreateInstance];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -37,6 +35,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)onClick:(id)sender
+{
+	NSURL *url = [NSURL URLWithString:@"https://github.com/iamnick/MDF/tree/master/MDF2"];
+	[[UIApplication sharedApplication] openURL:url];
 }
 
 @end

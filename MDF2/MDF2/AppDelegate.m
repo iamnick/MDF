@@ -10,8 +10,8 @@
 
 #import "FirstViewController.h"
 #import "SecondViewController.h"
-#import "ThirdViewController.h"
 #import "DetailsView.h"
+#import "AboutView.h"
 
 @implementation AppDelegate
 
@@ -23,7 +23,7 @@
     UINavigationController *navController1 = [[UINavigationController alloc] initWithRootViewController:viewController1];
     UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
      UINavigationController *navController2 = [[UINavigationController alloc] initWithRootViewController:viewController2];
-    UIViewController *viewController3 = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil];
+    UIViewController *viewController3 = [[AboutView alloc] initWithNibName:@"AboutView" bundle:nil];
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = @[navController1, navController2, viewController3];
     self.window.rootViewController = self.tabBarController;
