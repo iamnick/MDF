@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Mapkit/MapKit.h>
 
 @interface BusinessData : NSObject
 

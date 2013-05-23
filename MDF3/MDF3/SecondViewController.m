@@ -28,6 +28,20 @@
 							
 - (void)viewDidLoad
 {
+	// Set up map's initial view point
+    MKCoordinateSpan span;
+    span.latitudeDelta = 30.0f;
+    span.longitudeDelta = 30.0f;
+    
+    CLLocationCoordinate2D center;
+    center.latitude = 39.8282f;
+    center.longitude = -97.5795f;
+    
+    MKCoordinateRegion region;
+    region.center = center;
+    region.span = span;
+    mapView.region = region;
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

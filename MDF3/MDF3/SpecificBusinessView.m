@@ -51,6 +51,20 @@
     locLabel.text = [[[BusinessData GetInstance] locs] objectAtIndex:i];
     coordsLabel.text = [NSString stringWithFormat:@"Lat: %f, Lng: %f", [[[[BusinessData GetInstance] lats] objectAtIndex:i] doubleValue], [[[[BusinessData GetInstance] lngs] objectAtIndex:i] doubleValue]];
     
+    // Set up map's initial view point
+    // Set up map's initial view point
+    MKCoordinateSpan span;
+    span.latitudeDelta = 3.0f;
+    span.longitudeDelta = 3.0f;
+    
+    CLLocationCoordinate2D center;
+    center.latitude = [[[[BusinessData GetInstance] lats] objectAtIndex:i] doubleValue];
+    center.longitude =[[[[BusinessData GetInstance] lngs] objectAtIndex:i] doubleValue];
+    
+    MKCoordinateRegion region;
+    region.center = center;
+    region.span = span;
+    mapView.region = region;
 
 }
 
