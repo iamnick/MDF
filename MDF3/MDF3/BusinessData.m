@@ -34,10 +34,10 @@ static BusinessData *_instance = nil;
 {
 	if (self = [super init]){
     	// custom init, business names/coords hard coded here
-        [self setNames:@[@"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J"]];
-        [self setLocs:@[@"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J"]];
-        [self setLats:@[@1112.1112, @2222.2222, @33.33, @44.44, @55.55, @66.66, @77.77, @88.88, @99.99, @1001.1001]];
-		[self setLngs:@[@11.11, @22.22, @33.33, @44.44, @55.55, @66.66, @77.77, @88.88, @99.99, @100.100]];
+        [self setNames:@[@"Barnes & Noble", @"Big Y", @"Costco", @"Dell", @"Domino's Pizza", @"Five Guys", @"GameStop", @"Papa John's", @"Petco", @"Walmart"]];
+        [self setLocs:@[@"New York City, NY", @"Springfield, MA", @"Issaquah, WA", @"Round Rock, TX", @"Ann Arbor, MI", @"Lorton, VA", @"Grapevine, TX", @"Louisville, KY", @"San Diego, CA", @"Bentonville, AR"]];
+        [self setLats:@[@40.4251, @42.0605, @47.3149, @30.3029, @42.1614, @38.4215, @32.5603, @38.1515, @32.4255, @36.2222]];
+		[self setLngs:@[@-74.0023, @-72.3525, @-122.0153, @-97.4043, @-83.4335, @-77.1341, @-97.0440, @-85.4533, @-117.0923, @-94.1231]];
     }
     return self;
 }
