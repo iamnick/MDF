@@ -1,33 +1,32 @@
 //
-//  SecondViewController.m
+//  SpecificBusinessView.m
 //  MDF3
 //
-//  Created by Nick Stelzer on 5/22/13.
+//  Created by Nick Stelzer on 5/23/13.
 //  Copyright (c) 2013 Nick Stelzer. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "SpecificBusinessView.h"
 
-@interface SecondViewController ()
+@interface SpecificBusinessView ()
 
 @end
 
-@implementation SecondViewController
+@implementation SpecificBusinessView
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"View All On Map", @"View All On Map");
-        self.tabBarItem.image = [UIImage imageNamed:@"second"];
+        // Custom initialization
     }
     return self;
 }
-							
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning

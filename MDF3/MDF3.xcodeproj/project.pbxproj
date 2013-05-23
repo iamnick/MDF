@@ -24,6 +24,10 @@
 		828456B5174DC42B0081238A /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 828456B4174DC42B0081238A /* second@2x.png */; };
 		828456B8174DC42B0081238A /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 828456B6174DC42B0081238A /* FirstViewController.xib */; };
 		828456BB174DC42B0081238A /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 828456B9174DC42B0081238A /* SecondViewController.xib */; };
+		828456C2174DC5820081238A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828456C1174DC5820081238A /* MapKit.framework */; };
+		828456C5174DC6480081238A /* BusinessData.m in Sources */ = {isa = PBXBuildFile; fileRef = 828456C4174DC6480081238A /* BusinessData.m */; };
+		828456CE174DCCAB0081238A /* SpecificBusinessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 828456CC174DCCAB0081238A /* SpecificBusinessView.m */; };
+		828456CF174DCCAB0081238A /* SpecificBusinessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 828456CD174DCCAB0081238A /* SpecificBusinessView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,12 @@
 		828456B4174DC42B0081238A /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		828456B7174DC42B0081238A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
 		828456BA174DC42B0081238A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
+		828456C1174DC5820081238A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		828456C3174DC6480081238A /* BusinessData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessData.h; sourceTree = "<group>"; };
+		828456C4174DC6480081238A /* BusinessData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessData.m; sourceTree = "<group>"; };
+		828456CB174DCCAB0081238A /* SpecificBusinessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecificBusinessView.h; sourceTree = "<group>"; };
+		828456CC174DCCAB0081238A /* SpecificBusinessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecificBusinessView.m; sourceTree = "<group>"; };
+		828456CD174DCCAB0081238A /* SpecificBusinessView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpecificBusinessView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				828456C2174DC5820081238A /* MapKit.framework in Frameworks */,
 				82845691174DC42B0081238A /* UIKit.framework in Frameworks */,
 				82845693174DC42B0081238A /* Foundation.framework in Frameworks */,
 				82845695174DC42B0081238A /* CoreGraphics.framework in Frameworks */,
@@ -69,6 +80,7 @@
 		82845684174DC42B0081238A = {
 			isa = PBXGroup;
 			children = (
+				828456C1174DC5820081238A /* MapKit.framework */,
 				82845696174DC42B0081238A /* MDF3 */,
 				8284568F174DC42B0081238A /* Frameworks */,
 				8284568E174DC42B0081238A /* Products */,
@@ -109,6 +121,11 @@
 				828456B6174DC42B0081238A /* FirstViewController.xib */,
 				828456B9174DC42B0081238A /* SecondViewController.xib */,
 				82845697174DC42B0081238A /* Supporting Files */,
+				828456C3174DC6480081238A /* BusinessData.h */,
+				828456C4174DC6480081238A /* BusinessData.m */,
+				828456CB174DCCAB0081238A /* SpecificBusinessView.h */,
+				828456CC174DCCAB0081238A /* SpecificBusinessView.m */,
+				828456CD174DCCAB0081238A /* SpecificBusinessView.xib */,
 			);
 			path = MDF3;
 			sourceTree = "<group>";
@@ -188,6 +205,7 @@
 				828456B5174DC42B0081238A /* second@2x.png in Resources */,
 				828456B8174DC42B0081238A /* FirstViewController.xib in Resources */,
 				828456BB174DC42B0081238A /* SecondViewController.xib in Resources */,
+				828456CF174DCCAB0081238A /* SpecificBusinessView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +220,8 @@
 				828456A1174DC42B0081238A /* AppDelegate.m in Sources */,
 				828456AA174DC42B0081238A /* FirstViewController.m in Sources */,
 				828456B1174DC42B0081238A /* SecondViewController.m in Sources */,
+				828456C5174DC6480081238A /* BusinessData.m in Sources */,
+				828456CE174DCCAB0081238A /* SpecificBusinessView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
