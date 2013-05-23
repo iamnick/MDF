@@ -12,8 +12,10 @@
 @interface BusinessData : NSObject
 
 @property NSArray *names;
+@property NSArray *locs;
 @property NSArray *lats;
 @property NSArray *lngs;
+@property int selectedItem;
 
 +(void)CreateInstance;
 +(BusinessData*)GetInstance;

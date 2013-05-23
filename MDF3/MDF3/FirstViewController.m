@@ -63,6 +63,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+	[[BusinessData GetInstance] setSelectedItem:indexPath.row];
 	SpecificBusinessView *specificView = [[SpecificBusinessView alloc] initWithNibName:@"SpecificBusinessView" bundle:nil];
     if (specificView != nil) {
         [self.navigationController pushViewController:specificView animated:true];

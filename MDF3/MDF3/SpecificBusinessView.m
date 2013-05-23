@@ -7,6 +7,7 @@
 //
 
 #import "SpecificBusinessView.h"
+#import "BusinessData.h"
 #import "MyAnnotations.h"
 
 @interface SpecificBusinessView ()
@@ -28,6 +29,29 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	int i = [[BusinessData GetInstance] selectedItem];
+    
+    // Create Pin on the View
+    NSString *newTitle = [NSString stringWithString:[[[BusinessData GetInstance] names] objectAtIndex:i]];
+    CLLocationCoordinate2D newCoord;
+    newCoord.latitude = [[[[BusinessData GetInstance] lats] objectAtIndex:i] doubleValue];
+    newCoord.longitude = [[[[BusinessData GetInstance] lngs] objectAtIndex:i] doubleValue];
+    
+    NSLog(@"LAT=%f LNG=%f LOC=%@", [[[[BusinessData GetInstance] lats] objectAtIndex:i] doubleValue], [[[[BusinessData GetInstance] lngs] objectAtIndex:i] doubleValue], newTitle);
+    
+    MyAnnotations *newPin = [[MyAnnotations alloc] initWithTitle:newTitle coord:newCoord];
+    [mapView addAnnotation:newPin];
+    
+    // Set up Labels
+    nameLabel.text = [[[BusinessData GetInstance] names] objectAtIndex:i];
+    locLabel.text = [[[BusinessData GetInstance] locs] objectAtIndex:i];
+    coordsLabel.text = [NSString stringWithFormat:@"Lat: %f, Lng: %f", [[[[BusinessData GetInstance] lats] objectAtIndex:i] doubleValue], [[[[BusinessData GetInstance] lngs] objectAtIndex:i] doubleValue]];
+    
+
 }
 
 - (void)didReceiveMemoryWarning
