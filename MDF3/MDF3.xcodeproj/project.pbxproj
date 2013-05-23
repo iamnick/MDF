@@ -29,6 +29,8 @@
 		828456CE174DCCAB0081238A /* SpecificBusinessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 828456CC174DCCAB0081238A /* SpecificBusinessView.m */; };
 		828456CF174DCCAB0081238A /* SpecificBusinessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 828456CD174DCCAB0081238A /* SpecificBusinessView.xib */; };
 		828456D2174DF23B0081238A /* MyAnnotations.m in Sources */ = {isa = PBXBuildFile; fileRef = 828456D1174DF23B0081238A /* MyAnnotations.m */; };
+		828456D8174EC2370081238A /* 57icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 828456D7174EC2370081238A /* 57icon.png */; };
+		828456DA174EC23E0081238A /* 114icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 828456D9174EC23E0081238A /* 114icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		828456CD174DCCAB0081238A /* SpecificBusinessView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpecificBusinessView.xib; sourceTree = "<group>"; };
 		828456D0174DF23B0081238A /* MyAnnotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotations.h; sourceTree = "<group>"; };
 		828456D1174DF23B0081238A /* MyAnnotations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotations.m; sourceTree = "<group>"; };
+		828456D7174EC2370081238A /* 57icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57icon.png; sourceTree = "<group>"; };
+		828456D9174EC23E0081238A /* 114icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 		82845684174DC42B0081238A = {
 			isa = PBXGroup;
 			children = (
+				828456D9174EC23E0081238A /* 114icon.png */,
+				828456D7174EC2370081238A /* 57icon.png */,
 				828456C1174DC5820081238A /* MapKit.framework */,
 				82845696174DC42B0081238A /* MDF3 */,
 				8284568F174DC42B0081238A /* Frameworks */,
@@ -211,6 +217,8 @@
 				828456B8174DC42B0081238A /* FirstViewController.xib in Resources */,
 				828456BB174DC42B0081238A /* SecondViewController.xib in Resources */,
 				828456CF174DCCAB0081238A /* SpecificBusinessView.xib in Resources */,
+				828456D8174EC2370081238A /* 57icon.png in Resources */,
+				828456DA174EC23E0081238A /* 114icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

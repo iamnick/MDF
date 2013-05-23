@@ -35,6 +35,9 @@
 {
 	int i = [[BusinessData GetInstance] selectedItem];
     
+ 	// Change title
+    self.title = [[[BusinessData GetInstance] names] objectAtIndex:i];
+    
     // Create Pin on the View
     NSString *newTitle = [NSString stringWithString:[[[BusinessData GetInstance] names] objectAtIndex:i]];
     CLLocationCoordinate2D newCoord;
@@ -52,7 +55,6 @@
     coordsLabel.text = [NSString stringWithFormat:@"Lat: %f, Lng: %f", [[[[BusinessData GetInstance] lats] objectAtIndex:i] doubleValue], [[[[BusinessData GetInstance] lngs] objectAtIndex:i] doubleValue]];
     
     // Set up map's initial view point
-    // Set up map's initial view point
     MKCoordinateSpan span;
     span.latitudeDelta = 3.0f;
     span.longitudeDelta = 3.0f;
@@ -65,7 +67,6 @@
     region.center = center;
     region.span = span;
     mapView.region = region;
-
 }
 
 - (void)didReceiveMemoryWarning
