@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @interface SpecificBusinessView : UIViewController
-
+{
+	IBOutlet UILabel *nameLabel;
+    IBOutlet UILabel *locLabel;
+    IBOutlet UILabel *coordsLabel;
+    IBOutlet MKMapView *mapView;
+}
 @end

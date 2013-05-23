@@ -7,6 +7,8 @@
 //
 
 #import "SecondViewController.h"
+#import "BusinessData.h"
+#import "MyAnnotations.h"
 
 @interface SecondViewController ()
 
@@ -28,6 +30,22 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	for (int i = 0; i < [[[BusinessData GetInstance] lats] count]; i++)
+    {
+    	NSString *newTitle = [NSString stringWithString:[[[BusinessData GetInstance] names] objectAtIndex:i]];
+        CLLocationCoordinate2D newCoord;
+        newCoord.latitude = [[[[BusinessData GetInstance] lats] objectAtIndex:i] doubleValue];
+        newCoord.longitude = [[[[BusinessData GetInstance] lngs] objectAtIndex:i] doubleValue];
+        
+        NSLog(@"LAT=%f LNG=%f LOC=%@", [[[[BusinessData GetInstance] lats] objectAtIndex:i] doubleValue], [[[[BusinessData GetInstance] lngs] objectAtIndex:i] doubleValue], newTitle);
+        
+    	MyAnnotations *newPin = [[MyAnnotations alloc] initWithTitle:newTitle coord:newCoord];
+        [mapView addAnnotation:newPin];
+    }
 }
 
 - (void)didReceiveMemoryWarning

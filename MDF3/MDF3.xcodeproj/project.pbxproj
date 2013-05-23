@@ -28,6 +28,7 @@
 		828456C5174DC6480081238A /* BusinessData.m in Sources */ = {isa = PBXBuildFile; fileRef = 828456C4174DC6480081238A /* BusinessData.m */; };
 		828456CE174DCCAB0081238A /* SpecificBusinessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 828456CC174DCCAB0081238A /* SpecificBusinessView.m */; };
 		828456CF174DCCAB0081238A /* SpecificBusinessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 828456CD174DCCAB0081238A /* SpecificBusinessView.xib */; };
+		828456D2174DF23B0081238A /* MyAnnotations.m in Sources */ = {isa = PBXBuildFile; fileRef = 828456D1174DF23B0081238A /* MyAnnotations.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,8 @@
 		828456CB174DCCAB0081238A /* SpecificBusinessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecificBusinessView.h; sourceTree = "<group>"; };
 		828456CC174DCCAB0081238A /* SpecificBusinessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecificBusinessView.m; sourceTree = "<group>"; };
 		828456CD174DCCAB0081238A /* SpecificBusinessView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpecificBusinessView.xib; sourceTree = "<group>"; };
+		828456D0174DF23B0081238A /* MyAnnotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotations.h; sourceTree = "<group>"; };
+		828456D1174DF23B0081238A /* MyAnnotations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotations.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				828456CB174DCCAB0081238A /* SpecificBusinessView.h */,
 				828456CC174DCCAB0081238A /* SpecificBusinessView.m */,
 				828456CD174DCCAB0081238A /* SpecificBusinessView.xib */,
+				828456D0174DF23B0081238A /* MyAnnotations.h */,
+				828456D1174DF23B0081238A /* MyAnnotations.m */,
 			);
 			path = MDF3;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				828456B1174DC42B0081238A /* SecondViewController.m in Sources */,
 				828456C5174DC6480081238A /* BusinessData.m in Sources */,
 				828456CE174DCCAB0081238A /* SpecificBusinessView.m in Sources */,
+				828456D2174DF23B0081238A /* MyAnnotations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
