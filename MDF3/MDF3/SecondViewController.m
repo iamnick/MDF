@@ -55,8 +55,6 @@
         newCoord.latitude = [[[[BusinessData GetInstance] lats] objectAtIndex:i] doubleValue];
         newCoord.longitude = [[[[BusinessData GetInstance] lngs] objectAtIndex:i] doubleValue];
         
-        NSLog(@"LAT=%f LNG=%f LOC=%@", [[[[BusinessData GetInstance] lats] objectAtIndex:i] doubleValue], [[[[BusinessData GetInstance] lngs] objectAtIndex:i] doubleValue], newTitle);
-        
     	MyAnnotations *newPin = [[MyAnnotations alloc] initWithTitle:newTitle coord:newCoord];
         [mapView addAnnotation:newPin];
     }
