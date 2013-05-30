@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SecondViewController : UIViewController
-
+{
+	IBOutlet UITextView *textView;
+}
 @end
