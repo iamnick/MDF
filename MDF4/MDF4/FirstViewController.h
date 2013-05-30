@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-
+@interface FirstViewController : UIViewController <NSURLConnectionDataDelegate>
+{
+	NSURLRequest *request;
+    NSURL *url;
+    NSURLConnection *connection;
+    NSMutableData *requestData;
+}
 @end

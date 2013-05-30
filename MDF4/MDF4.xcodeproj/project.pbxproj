@@ -24,6 +24,7 @@
 		8284570C17572CD10081238A /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8284570B17572CD10081238A /* second@2x.png */; };
 		8284570F17572CD10081238A /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8284570D17572CD10081238A /* FirstViewController.xib */; };
 		8284571217572CD10081238A /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8284571017572CD10081238A /* SecondViewController.xib */; };
+		8284571A17572D4D0081238A /* Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284571917572D4D0081238A /* Stream.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		8284570B17572CD10081238A /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		8284570E17572CD10081238A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
 		8284571117572CD10081238A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
+		8284571817572D4D0081238A /* Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stream.h; sourceTree = "<group>"; };
+		8284571917572D4D0081238A /* Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stream.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				8284570D17572CD10081238A /* FirstViewController.xib */,
 				8284571017572CD10081238A /* SecondViewController.xib */,
 				828456EE17572CD10081238A /* Supporting Files */,
+				8284571817572D4D0081238A /* Stream.h */,
+				8284571917572D4D0081238A /* Stream.m */,
 			);
 			path = MDF4;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 				828456F817572CD10081238A /* AppDelegate.m in Sources */,
 				8284570117572CD10081238A /* FirstViewController.m in Sources */,
 				8284570817572CD10081238A /* SecondViewController.m in Sources */,
+				8284571A17572D4D0081238A /* Stream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
