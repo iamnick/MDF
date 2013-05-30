@@ -94,7 +94,6 @@
     if ([elementName isEqualToString:@"stream"]) {
     	// allocate and initialize Stream object
         currentStream = [[Stream alloc] init];
-        NSLog(@"Found new <stream>");
     }
 }
 
@@ -130,7 +129,6 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	NSLog(@"%d", [streamArray count]);
 	return [streamArray count];
 }
 

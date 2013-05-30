@@ -28,6 +28,8 @@
 		8284571E1757EC1C0081238A /* DetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284571C1757EC1C0081238A /* DetailsView.m */; };
 		8284571F1757EC1C0081238A /* DetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8284571D1757EC1C0081238A /* DetailsView.xib */; };
 		828457221757ED270081238A /* DataHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 828457211757ED270081238A /* DataHolder.m */; };
+		8284572917581D550081238A /* 57icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8284572817581D550081238A /* 57icon.png */; };
+		8284572B17581D590081238A /* 114icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8284572A17581D590081238A /* 114icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		8284571D1757EC1C0081238A /* DetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsView.xib; sourceTree = "<group>"; };
 		828457201757ED270081238A /* DataHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHolder.h; sourceTree = "<group>"; };
 		828457211757ED270081238A /* DataHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHolder.m; sourceTree = "<group>"; };
+		8284572817581D550081238A /* 57icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57icon.png; sourceTree = "<group>"; };
+		8284572A17581D590081238A /* 114icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 		828456DB17572CD10081238A = {
 			isa = PBXGroup;
 			children = (
+				8284572A17581D590081238A /* 114icon.png */,
+				8284572817581D550081238A /* 57icon.png */,
 				828456ED17572CD10081238A /* MDF4 */,
 				828456E617572CD10081238A /* Frameworks */,
 				828456E517572CD10081238A /* Products */,
@@ -207,6 +213,8 @@
 				8284570F17572CD10081238A /* FirstViewController.xib in Resources */,
 				8284571217572CD10081238A /* SecondViewController.xib in Resources */,
 				8284571F1757EC1C0081238A /* DetailsView.xib in Resources */,
+				8284572917581D550081238A /* 57icon.png in Resources */,
+				8284572B17581D590081238A /* 114icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
