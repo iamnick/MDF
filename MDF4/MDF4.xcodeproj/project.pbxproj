@@ -25,6 +25,9 @@
 		8284570F17572CD10081238A /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8284570D17572CD10081238A /* FirstViewController.xib */; };
 		8284571217572CD10081238A /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8284571017572CD10081238A /* SecondViewController.xib */; };
 		8284571A17572D4D0081238A /* Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284571917572D4D0081238A /* Stream.m */; };
+		8284571E1757EC1C0081238A /* DetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8284571C1757EC1C0081238A /* DetailsView.m */; };
+		8284571F1757EC1C0081238A /* DetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8284571D1757EC1C0081238A /* DetailsView.xib */; };
+		828457221757ED270081238A /* DataHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 828457211757ED270081238A /* DataHolder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,11 @@
 		8284571117572CD10081238A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
 		8284571817572D4D0081238A /* Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stream.h; sourceTree = "<group>"; };
 		8284571917572D4D0081238A /* Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stream.m; sourceTree = "<group>"; };
+		8284571B1757EC1C0081238A /* DetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsView.h; sourceTree = "<group>"; };
+		8284571C1757EC1C0081238A /* DetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsView.m; sourceTree = "<group>"; };
+		8284571D1757EC1C0081238A /* DetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsView.xib; sourceTree = "<group>"; };
+		828457201757ED270081238A /* DataHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHolder.h; sourceTree = "<group>"; };
+		828457211757ED270081238A /* DataHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHolder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +122,11 @@
 				828456EE17572CD10081238A /* Supporting Files */,
 				8284571817572D4D0081238A /* Stream.h */,
 				8284571917572D4D0081238A /* Stream.m */,
+				8284571B1757EC1C0081238A /* DetailsView.h */,
+				8284571C1757EC1C0081238A /* DetailsView.m */,
+				8284571D1757EC1C0081238A /* DetailsView.xib */,
+				828457201757ED270081238A /* DataHolder.h */,
+				828457211757ED270081238A /* DataHolder.m */,
 			);
 			path = MDF4;
 			sourceTree = "<group>";
@@ -193,6 +206,7 @@
 				8284570C17572CD10081238A /* second@2x.png in Resources */,
 				8284570F17572CD10081238A /* FirstViewController.xib in Resources */,
 				8284571217572CD10081238A /* SecondViewController.xib in Resources */,
+				8284571F1757EC1C0081238A /* DetailsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +222,8 @@
 				8284570117572CD10081238A /* FirstViewController.m in Sources */,
 				8284570817572CD10081238A /* SecondViewController.m in Sources */,
 				8284571A17572D4D0081238A /* Stream.m in Sources */,
+				8284571E1757EC1C0081238A /* DetailsView.m in Sources */,
+				828457221757ED270081238A /* DataHolder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

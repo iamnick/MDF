@@ -8,6 +8,8 @@
 
 #import "FirstViewController.h"
 #import "Stream.h"
+#import "DetailsView.h"
+#import "DataHolder.h"
 
 @interface FirstViewController ()
 
@@ -19,7 +21,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"First", @"First");
+        self.title = NSLocalizedString(@"LoL Streams", @"LoL Streams");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
     return self;
@@ -28,6 +30,8 @@
 - (void)viewDidLoad
 {
 	streamArray = [[NSMutableArray alloc] init];
+    [DataHolder CreateInstance];
+    
 	// Access XML Data from Justin.tv API
 	url = [[NSURL alloc] initWithString:@"http://api.justin.tv/api/stream/list.xml?meta_game=League%20of%20Legends&limit=10"];
     request = [[NSURLRequest alloc] initWithURL:url];
@@ -110,6 +114,8 @@
         	[currentStream setTitle:currentElementValue];
         }
     } else if ([elementName isEqualToString:@"name"]) {
+    	// Remove the "live_user_" prefix
+        [currentElementValue setString:[currentElementValue substringFromIndex:10]];
     	[currentStream setUsername:currentElementValue];
     } else if ([elementName isEqualToString:@"stream_count"]) {
     	[currentStream setViewers:currentElementValue];
@@ -146,7 +152,11 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+	[[DataHolder GetInstance] setStream:[streamArray objectAtIndex:indexPath.row]];
+	DetailsView *detailsView = [[DetailsView alloc] initWithNibName:@"DetailsView" bundle:nil];
+    if (detailsView) {
+        [self.navigationController pushViewController:detailsView animated:true];
+    }
 }
 
 
