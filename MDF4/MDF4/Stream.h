@@ -10,4 +10,10 @@
 
 @interface Stream : NSObject
 
+@property (nonatomic) NSString *title;
+@property (nonatomic) NSString *username;
+@property (nonatomic) NSString *viewers;
+@property (nonatomic) NSString *totalViews;
+@property (nonatomic) NSString *streamLink;
+
 @end

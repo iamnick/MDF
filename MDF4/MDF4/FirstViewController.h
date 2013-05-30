@@ -7,12 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Stream.h"
 
-@interface FirstViewController : UIViewController <NSURLConnectionDataDelegate>
+@interface FirstViewController : UIViewController <NSURLConnectionDataDelegate, NSXMLParserDelegate>
 {
 	NSURLRequest *request;
     NSURL *url;
     NSURLConnection *connection;
     NSMutableData *requestData;
+
+    NSString *currentElement;
+    NSMutableString *currentElementValue;
+	Stream *currentStream;
+    NSMutableArray *streamArray;
 }
 @end
