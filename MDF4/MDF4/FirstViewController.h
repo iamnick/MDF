@@ -20,5 +20,7 @@
     NSMutableString *currentElementValue;
 	Stream *currentStream;
     NSMutableArray *streamArray;
+    
+    IBOutlet UITableView *tableView;
 }
 @end

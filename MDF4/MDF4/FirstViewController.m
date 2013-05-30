@@ -27,6 +27,7 @@
 							
 - (void)viewDidLoad
 {
+	streamArray = [[NSMutableArray alloc] init];
 	// Access XML Data from Justin.tv API
 	url = [[NSURL alloc] initWithString:@"http://api.justin.tv/api/stream/list.xml?meta_game=League%20of%20Legends&limit=10"];
     request = [[NSURLRequest alloc] initWithURL:url];
@@ -80,6 +81,8 @@
     return nil;
 }
 
+// XML Parsing
+
 -(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
 {
 	currentElement = [elementName copy];
@@ -96,31 +99,55 @@
 	[currentElementValue appendString:string];
 }
 
-
 -(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
 	if ([elementName isEqualToString:@"stream"]) {
-    	// add Stream object to array
-        NSLog(@"Title - %@", [currentStream title]);
-        NSLog(@"Username - %@", [currentStream username]);
-        NSLog(@"Viewers - %@", [currentStream viewers]);
-        NSLog(@"Total Views - %@", [currentStream totalViews]);
-        NSLog(@"Stream Link - %@", [currentStream streamLink]);
+    	// add Stream object to array if a <stream> tag has ended
         [streamArray addObject:currentStream];
-        NSLog(@"End of <stream>");
-    } else if ([elementName isEqualToString:@"title"]){
+    } else if ([elementName isEqualToString:@"title"]) {
         // Only takes the first <title> tag value, the second one is incorrect
         if (![currentStream title]) {
         	[currentStream setTitle:currentElementValue];
         }
-    } else if ([elementName isEqualToString:@"name"]){
+    } else if ([elementName isEqualToString:@"name"]) {
     	[currentStream setUsername:currentElementValue];
-    } else if ([elementName isEqualToString:@"stream_count"]){
+    } else if ([elementName isEqualToString:@"stream_count"]) {
     	[currentStream setViewers:currentElementValue];
-    } else if ([elementName isEqualToString:@"channel_view_count"]){
+    } else if ([elementName isEqualToString:@"channel_view_count"]) {
     	[currentStream setTotalViews:currentElementValue];
-    } else if ([elementName isEqualToString:@"channel_url"]){
+    } else if ([elementName isEqualToString:@"channel_url"]) {
         [currentStream setStreamLink:currentElementValue];
-    }
+    } 
 }
+
+// Table View Configuration
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	NSLog(@"%d", [streamArray count]);
+	return [streamArray count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	static NSString *CellIdentifier = @"Cell";
+	
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+	}
+    cell.textLabel.text = [[streamArray objectAtIndex:indexPath.row] title];
+    
+    UIFont *cellFont = [ UIFont fontWithName: @"Arial" size: 16.0 ];
+	cell.textLabel.font  = cellFont;
+
+	return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+}
+
+
 @end
